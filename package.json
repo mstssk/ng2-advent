@@ -8,18 +8,24 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "del 'src/*.js' 'src/*.js.map' 'src/*.ngfactory.ts' 'src/*.metadata.json'",
+    "ngc": "ngc --noEmit -p .",
+    "tsc": "tsc -p .",
+    "test": "npm run clean && npm run ngc && npm run tsc"
   },
   "author": "mstssk",
   "license": "MIT",
   "dependencies": {
-    "@angular/common": "^2.2.4",
-    "@angular/compiler": "^2.2.4",
-    "@angular/compiler-cli": "^2.2.4",
-    "@angular/core": "^2.2.4",
-    "@angular/platform-browser": "^2.2.4",
-    "rxjs": "^5.0.0-beta.12",
-    "typescript": "^2.0.10",
-    "zone.js": "^0.6.26"
+    "@angular/common": "2.2.4",
+    "@angular/compiler": "2.2.4",
+    "@angular/compiler-cli": "2.2.4",
+    "@angular/core": "2.2.4",
+    "@angular/platform-browser": "2.2.4",
+    "rxjs": "5.0.0-beta.12",
+    "typescript": "2.0.10",
+    "zone.js": "0.6.26"
+  },
+  "devDependencies": {
+    "del-cli": "^0.2.0"
   }
 }
