@@ -8,10 +8,11 @@
   },
   "main": "index.js",
   "scripts": {
-    "clean": "del 'src/*.js' 'src/*.js.map' 'src/*.ngfactory.ts' 'src/*.metadata.json'",
+    "clean": "del 'src/*.js' 'src/*.js.map' 'src/*.ngfactory.ts' 'src/*.metadata.json' dist/bund",
     "ngc": "ngc --noEmit -p .",
     "tsc": "tsc -p .",
-    "test": "npm run clean && npm run ngc && npm run tsc"
+    "test": "npm run clean && npm run ngc && npm run tsc && webpack",
+    "start": "live-server dist/ --quiet --entry-file=index.html"
   },
   "author": "mstssk",
   "license": "MIT",
@@ -21,11 +22,14 @@
     "@angular/compiler-cli": "2.2.4",
     "@angular/core": "2.2.4",
     "@angular/platform-browser": "2.2.4",
+    "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.0-beta.12",
     "typescript": "2.0.10",
-    "zone.js": "0.6.26"
+    "zone.js": "^0.6.26"
   },
   "devDependencies": {
-    "del-cli": "^0.2.0"
+    "del-cli": "^0.2.0",
+    "live-server": "^1.1.0",
+    "webpack": "^2.1.0-beta.27"
   }
 }
