@@ -1,5 +1,12 @@
 <h1>Sample</h1>
 
+<h2>disabled</h2>
+<input value="{{url}}" disabled="{{disabled}}">
+<input [value]="url" [disabled]="disabled">
+<input [attr.value]="url" [attr.disabled]="disabled">
+
+<hr>
+
 <h2>全体を挿入</h2>
 <a href="{{url}}">FULL: interpolation</a>
 <a [href]="url">FULL: property binding</a>

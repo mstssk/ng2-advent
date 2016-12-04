@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
     templateUrl: './app.component.html'
 })
 export class AppComponent {
+    disabled = false;
     url = 'http://example.com/';
     invalidUrl = 'hoge://example.com/';
     domain = 'example.com'
