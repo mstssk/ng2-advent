@@ -45,8 +45,9 @@
 <h2>駄目なbackground-urlの書き方</h2>
 <div style="background-image:url({{bg}})">BG: interpolation</div>
 <div [style]="'background-image:url(' + bg + ')'">BG: property binding</div>
-<div [style.background-image]="'url(' + bg + ')'">BG: attribute binding</div>
-<div [ngStyle]="{'background-image': 'url(' + bg + ')'}">BG: ngStyle</div>
+<div [attr.style]="'background-image:url(' + bg + ')'">BG: attribute binding</div>
 
 <h2>background-urlの書き方: 例</h2>
+<div [style.background-image]="'url(' + bg + ')'">BG: style binding</div>
+<div [ngStyle]="{'background-image': 'url(' + bg + ')'}">BG: ngStyle</div>
 <div [ngStyle]="getBgStyle(bg)">BG: ngStyle</div>

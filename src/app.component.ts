@@ -10,7 +10,13 @@ export class AppComponent {
     invalidUrl = 'hoge://example.com/';
     domain = 'example.com'
     nullValue: string = null;
-    bg:string = 'bg.png';
+    bg:string;// = 'bg.png';
+
+    ngOnInit(){
+        setTimeout(()=>{
+            this.bg = 'bg.png';
+        }, 3000);
+    }
 
     getBgStyle(url:string) {
         let bgUrl = url ? `url(${url})` : null;
