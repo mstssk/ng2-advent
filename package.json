@@ -1,0 +1,25 @@
+{
+  "name": "ng2-advent",
+  "version": "1.0.0",
+  "description": "Sample project for Angular Advent Calender at Dec 6, 2016.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mstssk/ng2-advent.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mstssk",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/common": "^2.2.4",
+    "@angular/compiler": "^2.2.4",
+    "@angular/compiler-cli": "^2.2.4",
+    "@angular/core": "^2.2.4",
+    "@angular/platform-browser": "^2.2.4",
+    "rxjs": "^5.0.0-beta.12",
+    "typescript": "^2.0.10",
+    "zone.js": "^0.6.26"
+  }
+}
