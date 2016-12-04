@@ -5,5 +5,14 @@ import { Component } from '@angular/core';
     templateUrl: './app.component.html'
 })
 export class AppComponent {
-    url = 'http://exmaple.com/';
+    url = 'http://example.com/';
+    invalidUrl = 'hoge://example.com/';
+    domain = 'example.com'
+    nullValue: string = null;
+    bg:string = 'bg.png';
+
+    getBgStyle(url:string) {
+        let bgUrl = url ? `url(${url})` : null;
+        return { 'background-image': bgUrl };
+    }
 }

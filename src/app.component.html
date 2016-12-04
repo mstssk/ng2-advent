@@ -1,3 +1,45 @@
-<a href="{{url}}">interpolation</a>
-<a [href]="url">property binding</a>
-<a [attr.href]="url">attribute binding</a>
+<h1>Sample</h1>
+
+<h2>全体を挿入</h2>
+<a href="{{url}}">FULL: interpolation</a>
+<a [href]="url">FULL: property binding</a>
+<a [attr.href]="url">FULL: attribute binding</a>
+
+<hr>
+
+<h2>全体を挿入(不正なURL)</h2>
+<a href="{{invalidUrl}}">INVALID: interpolation</a>
+<a [href]="invalidUrl">INVALID: property binding</a>
+<a [attr.href]="invalidUrl">INVALID: attribute binding</a>
+
+<hr>
+
+<h2>nullの場合</h2>
+<a href="{{nullValue}}">NULL: interpolation</a>
+<a [href]="nullValue">NULL: property binding</a>
+<a [attr.href]="nullValue">NULL: attribute binding</a>
+
+<hr>
+
+<h2>インラインで加工</h2>
+<a href="http://{{domain}}/">PART: interpolation</a>
+<a [href]="'http://' + domain + '/'">PART: property binding</a>
+<a [attr.href]="'http://' + domain + '/'">PART: attribute binding</a>
+
+<hr>
+
+<h2>インラインで加工(nullの場合)</h2>
+<a href="http://{{nullValue}}/">PART(null): interpolation</a>
+<a [href]="'http://' + nullValue + '/'">PART(null): property binding</a>
+<a [attr.href]="'http://' + nullValue + '/'">PART(null): attribute binding</a>
+
+<hr>
+
+<h2>駄目なbackground-urlの書き方</h2>
+<div style="background-image:url({{bg}})">BG: interpolation</div>
+<div [style]="'background-image:url(' + bg + ')'">BG: property binding</div>
+<div [style.background-image]="'url(' + bg + ')'">BG: attribute binding</div>
+<div [ngStyle]="{'background-image': 'url(' + bg + ')'}">BG: ngStyle</div>
+
+<h2>background-urlの書き方: 例</h2>
+<div [ngStyle]="getBgStyle(bg)">BG: ngStyle</div>
