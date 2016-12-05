@@ -7,6 +7,12 @@
 
 <hr>
 
+<h2>クラス名</h2>
+<div class="foo {{disabled ? '' : 'enabled'}} bar">foobar</div>
+<div class="foo bar" [class.enabled]="!disabled">foobar</div>
+
+<hr>
+
 <h2>全体を挿入</h2>
 <a href="{{url}}">FULL: interpolation</a>
 <a [href]="url">FULL: property binding</a>
